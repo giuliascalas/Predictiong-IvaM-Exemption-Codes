@@ -6,7 +6,7 @@ Giulia Scalas - 772601, Contributor 2 - 77623, Contributor 3- 785051
 
 # Introduction
 
-This project aims to forecast the exemption VAT codes listed in the **"IvaM"** column of a dataset containing several invoice lines and information about each row indicating a particular transaction provided by TeamSytems (BIP). 
+This project aims to forecast the exemption VAT codes listed in the **"IvaM"** column of a dataset containing several invoice lines and information about each row indicating a particular transaction provided by CompanyName (For privacy reason, the name cannot be disclosed). 
 Therefore, it was necessary to determine which attributes within the dataset have meaningful correlations in predicting the exemption VAT code (“IvaM” column) for each invoice line. 
 It was mentioned that the Nature code ("Iva" column) and the exemption VAT code have similar meanings, but given that the Nature code contains only 21 values and the exemption VAT code contains over 60 values, direct mapping of the two variables was determined to be not useful without additional consideration of the other variables present in the dataset. 
 As such, we took several steps before implementing the multiclass classification models. 
@@ -86,7 +86,7 @@ These variables were the ones utilized as features in our models.
 
 These variables collectively capture crucial information about transactions, including business characteristics, VAT treatment, document type, industry classification, and accounting details, essential for analysis and IvaM classification. 
 
-As part of the preprocessing, we checked the unique values for all the variables as we did for the **‘IvaM’** variable, and we observed that some variables contained unmapped values. This is to say that in the data itself, we had classes that the dataset description provided by Teamsystem and BIP did not include or explain. 
+As part of the preprocessing, we checked the unique values for all the variables as we did for the **‘IvaM’** variable, and we observed that some variables contained unmapped values. This is to say that in the data itself, we had classes that the dataset description provided by CompanyName did not include or explain. 
 
 As variables _‘A’_ and _‘B’_ contained a small number of unmapped values, we decided to drop the rows that contained unmapped values for these variables. However, we observed that the quality of the dataset was compromised by unmapped values in both variables _‘Iva’_ and _‘IvaM’_.  ‘Iva’ contained values N2 and N3 that were not present in the dataset description. Therefore we chose to manually map _N2_ to values _N2.1_ or _N2.2_, and map _N3_ to _N3.1_, _N3.2_, _N3.4_, or _N3.6_, based on the frequency of corresponding IvaM values, further explained in the program notes.
 
