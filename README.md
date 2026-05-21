@@ -1,8 +1,8 @@
-# BIPproject-772601
+# Project-772601
 
-BIP Project- Predicting IvaM exemption code
+Predicting IvaM exemption code
 
-Giulia Scalas - 772601, Aida Isayas - 77623, Claire Probst- 785051
+Giulia Scalas - 772601, Contributor 2 - 77623, Contributor 3- 785051
 
 # Introduction
 
